@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Attendance Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section id="login">
+  <form id="loginForm">
+    <h1>Attendance Tracker</h1>
+    <p class="muted">Sign in to continue.</p>
+    <label>Username or email<input id="u" required autocomplete="username"></label>
+    <label>Password<input id="p" type="password" required autocomplete="current-password"></label>
+    <label>Role<select id="r"><option value="admin">Admin</option><option value="faculty">Faculty</option><option value="student">Student</option></select></label>
+    <p id="loginErr" class="err"></p>
+    <button class="primary">Sign in</button>
+  </form>
+</section>
+<div id="app" hidden>
+  <aside><h2>Attendance</h2><nav id="nav"></nav><button id="logout" class="ghost">Sign out</button></aside>
+  <main id="view"></main>
+</div>
+<div id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
